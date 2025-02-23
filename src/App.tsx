@@ -3,6 +3,7 @@ import Preloader from "./components/Preloader";
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 import Navbar from "./components/NavBar";
 import Home from "./pages/Home";
+import Test from "./pages/Test";
 const App = () => {
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -16,6 +17,7 @@ const App = () => {
        <main >
        <Routes>
           <Route path="/" element={<Home/>} />
+          <Route path="/test" element={<Test/>} />
         </Routes>
        </main>
       </Router>

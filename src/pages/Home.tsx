@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       </motion.div>
       
       {/* CTA Button */}
+      <Link to="/test">
       <motion.button 
         type="button" 
         className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center m-4"
@@ -28,6 +30,7 @@ const Home = () => {
       >
         Start the Test
       </motion.button>
+      </Link>
       
       {/* How It Works Section */}
       <section className="mt-12 max-w-3xl text-gray-300">
