@@ -32,7 +32,7 @@ const [stressResult, setStressResult] = useState(null);
   }
 
   if (!user) {
-    return <div className="text-white">Loading...</div>;
+    return <div className="loader flex items-center justify-center"></div>;
   }
   const avatarUrl = `https://api.dicebear.com/7.x/bottts/svg?seed=${encodeURIComponent(
     user?.name || "Guest"
