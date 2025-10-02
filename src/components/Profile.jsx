@@ -34,7 +34,7 @@ const [stressResult, setStressResult] = useState(null);
   if (!user) {
     return (
       <div className="flex items-center justify-center h-screen bg-[#020e1d]">
-        <div className="loader text-white text-8xl"></div>
+        <div className="loader"></div>
       </div>
     );
   }

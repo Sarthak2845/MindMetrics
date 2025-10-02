@@ -4,11 +4,15 @@
   font-weight: bold;
   font-family: monospace;
   font-size: 30px;
-  color: white;
+  color: white !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .loader:after {
   content: "Loading...";
   animation: dots 1.5s infinite;
+  color: white !important;
 }
 @keyframes dots {
   0%, 20% { content: "Loading"; }
