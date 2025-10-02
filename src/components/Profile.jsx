@@ -12,7 +12,7 @@ const [stressResult, setStressResult] = useState(null);
       try {
         const response = await axios.get('https://mindmetrics-backend.vercel.app/api/user-info', { withCredentials: true });
         setUser(response.data);
-      } catch (err) {
+      } catch {
         setError('Failed to fetch user information. Please try again.');
       }
     };
@@ -32,7 +32,11 @@ const [stressResult, setStressResult] = useState(null);
   }
 
   if (!user) {
-    return <div className="loader flex items-center justify-center"></div>;
+    return (
+      <div className="flex items-center justify-center h-screen relative">
+        <div className="loader"></div>
+      </div>
+    );
   }
   const avatarUrl = `https://api.dicebear.com/7.x/bottts/svg?seed=${encodeURIComponent(
     user?.name || "Guest"
