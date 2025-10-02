@@ -4,16 +4,21 @@ import { Link } from 'react-router-dom';
 
 const Profile = () => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-const [stressResult, setStressResult] = useState(null);
+  const [stressResult, setStressResult] = useState(null);
 
   useEffect(() => {
     const fetchUserInfo = async () => {
       try {
+        setLoading(true);
+        setError('');
         const response = await axios.get('https://mindmetrics-backend.vercel.app/api/user-info', { withCredentials: true });
         setUser(response.data);
       } catch {
         setError('Failed to fetch user information. Please try again.');
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -27,14 +32,18 @@ const [stressResult, setStressResult] = useState(null);
     }
   },[])
 
-  if (error) {
-    return <div className="text-red-500 text-center mt-24 text-6xl">{error}</div>;
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen bg-gradient-to-br from-gray-900 to-black">
+        <div className="loader"></div>
+      </div>
+    );
   }
 
-  if (!user) {
+  if (error) {
     return (
-      <div className="flex items-center justify-center h-screen relative">
-        <div className="loader"></div>
+      <div className="flex items-center justify-center h-screen bg-gradient-to-br from-gray-900 to-black">
+        <div className="text-red-500 text-center text-4xl">{error}</div>
       </div>
     );
   }
