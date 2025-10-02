@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 .loader {
   font-weight: bold;
   font-family: monospace;
@@ -13,20 +15,8 @@
   color: white !important;
 }
 @keyframes dots {
-  0%,
-  20% {
-    content: "Loading";
-  }
-  40% {
-    content: "Loading.";
-  }
-  60% {
-    content: "Loading..";
-  }
-  80%,
-  100% {
-    content: "Loading...";
-  }
+  0%, 20% { content: "Loading"; }
+  40% { content: "Loading."; }
+  60% { content: "Loading.."; }
+  80%, 100% { content: "Loading..."; }
 }
-
-/* Custom styles */
