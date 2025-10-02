@@ -38,10 +38,7 @@ const App = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {loading ? (
-        <Preloader onFinish={() => setLoading(false)} />
-      ) : (
-        <Router>
+      <Router>
           <Navbar isAuth={isAuthenticated}/>
           <div className="flex-grow pt-16 bg-gradient-to-br from-gray-900 to-black"> 
             <Routes>
@@ -50,7 +47,7 @@ const App = () => {
               <Route path="/" element={isAuthenticated ? <Navigate to="/home" /> : <SignUp />} />
             <Route path="/sign" element={<SignUp />} />
             <Route path="/home" element={isAuthenticated ? <Home /> : <Navigate to="/" />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/profile" element={isAuthenticated ? <Profile /> : <Navigate to="/" />} />
             <Route path="/instructions" element={<Instruction />} />
             <Route path="/test" element={<Test />} />
             <Route path='/remedies' element={<Remedies />} />
@@ -64,7 +61,6 @@ const App = () => {
           </div>
           <Footer />
         </Router>
-      )}
     </div>
   );
 };
