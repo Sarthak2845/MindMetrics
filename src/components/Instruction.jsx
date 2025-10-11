@@ -33,7 +33,7 @@ const Instruction = () => {
 
         <div className="flex justify-center mt-8">
         <Link to="/test">
-        <button className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 text-black text-2xl font-bold px-6 py-3 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <button className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 text-black text-2xl font-bold px-6 py-3 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
             Take Test
           </button>
         </Link>

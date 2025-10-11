@@ -1,12 +1,17 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const HeartInstruction = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
     return (
         <div className="max-w-4xl mx-auto px-6 py-12 text-amber-50">
           <h1 className="text-4xl font-bold mb-6 text-center text-indigo-600">📖 How to Use the Stress Detector</h1>
     
           {/* Step 1 */}
-          <div className="bg-[#020e1d] p-6 rounded-2xl shadow-md mb-6 border-4 border-[#0f6bdb]  hover:cursor-pointer">
+          <div className="bg-[#020e1d] p-6 rounded-2xl shadow-md mb-6 border-4 border-[#0f6bdb]">
             <h2 className="text-2xl font-semibold mb-2">🧑‍💻 Step 1: Sign Up with Google</h2>
             <p className="text-gray-300">
               For a seamless experience, sign up using your Google account. This helps us fetch real-time health data from your Google Fit account linked to your smartwatch or fitness band.
