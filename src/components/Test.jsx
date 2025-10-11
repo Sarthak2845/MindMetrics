@@ -109,14 +109,14 @@ const Test = () => {
           <div className="flex justify-between mt-4">
             <button
               onClick={handlePrevious}
-              className="px-4 py-2 bg-[#041b11] text-white rounded-lg border-1 border-[#0db66a] m-2"
+              className="px-4 py-2 bg-[#041b11] text-white rounded-lg border-1 border-[#0db66a] m-2 cursor-pointer"
               disabled={currentQuestion === 0}
             >
               Previous
             </button>
             <button
               onClick={handleNext}
-              className="px-4 py-2 bg-[#041b11] border-1 border-[#0db66a] text-white rounded-lg m-2"
+              className="px-4 py-2 bg-[#041b11] border-1 border-[#0db66a] text-white rounded-lg m-2 cursor-pointer"
               disabled={answers[currentQuestion] === null}
             >
               {currentQuestion === questions.length - 1 ? "Submit" : "Next"}
@@ -129,7 +129,7 @@ const Test = () => {
           <p className="text-gray-300">Last Test Date: {savedResult?.date}</p>
           <button
             onClick={handleRestart}
-            className="mt-4 px-4 py-2 bg-green-500 text-white rounded-lg"
+            className="mt-4 px-4 py-2 bg-green-500 text-white rounded-lg cursor-pointer"
           >
             Retake Test
           </button>

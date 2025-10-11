@@ -10,7 +10,7 @@ const Home = () => {
 
       {/* CTA Button */}
       <Link to="/instructions" className="mt-8">
-        <button className="bg-gradient-to-r from-amber-500 to-pink-500 px-6 py-3 rounded shadow-lg text-lg sm:text-xl hover:from-amber-600 hover:to-pink-600">Take the test</button>
+        <button className="bg-gradient-to-r from-amber-500 to-pink-500 px-6 py-3 rounded shadow-lg text-lg sm:text-xl hover:from-amber-600 hover:to-pink-600 cursor-pointer">Take the test</button>
       </Link>
 
       {/* How It Works Section */}
@@ -50,7 +50,7 @@ const Home = () => {
             </div>
           ))}
               <Link to="/heart-instruction" className="mt-8">
-        <button className="bg-gradient-to-r from-amber-500 to-pink-500 px-6 py-3 rounded shadow-lg text-lg sm:text-xl hover:from-amber-600 hover:to-pink-600">Calculate Using Heart Rate</button>
+        <button className="bg-gradient-to-r from-amber-500 to-pink-500 px-6 py-3 rounded shadow-lg text-lg sm:text-xl hover:from-amber-600 hover:to-pink-600 cursor-pointer">Calculate Using Heart Rate</button>
       </Link>
         </div>
       </section>

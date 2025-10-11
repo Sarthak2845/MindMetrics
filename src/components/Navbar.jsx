@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { BrainCircuit, Menu, X } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { IoPerson } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 
@@ -84,7 +84,7 @@ const Navbar = ({ isAuth, setIsAuth }) => {
               </Link>
               <button
                 onClick={handleLogout}
-                className="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded-lg transition duration-200"
+                className="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded-lg transition duration-200 cursor-pointer"
               >
                 Logout
               </button>
