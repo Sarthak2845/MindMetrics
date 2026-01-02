@@ -20,7 +20,7 @@
     "concurrently": "^9.1.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
-    "express": "^4.21.2",
+    "express": "^4.22.1",
     "express-session": "^1.18.1",
     "framer-motion": "^12.4.7",
     "lucide-react": "^0.475.0",
